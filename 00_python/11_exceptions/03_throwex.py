@@ -1,0 +1,14 @@
+def serve_chai(flavor):
+    try:
+        print(f"preparing {flavor} chai...")
+        if(flavor=="unknown"):
+            raise ValueError("We don't know the Flavor")
+    except ValueError as e :
+        print("Error",e)
+    else:
+        print(f"{flavor} chai is served")
+    finally:
+        print("Next Customer Please")
+
+serve_chai("masala")
+serve_chai("unknown")
